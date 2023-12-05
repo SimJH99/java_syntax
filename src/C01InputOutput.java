@@ -31,16 +31,19 @@ public class C01InputOutput {
 //        int inputs_int1 = myScan.nextInt();
 //        int inputs_int2 = myScan.nextInt();
 //        System.out.println("입력하신 두 수를 더한 값은 " + (inputs_int1 + inputs_int2) + " 입니다.");
-        System.out.println("double형 숫자를 입력해주세요");
-        double inputs_double = myScan.nextDouble();
-        System.out.println(inputs_double);
+//        System.out.println("double형 숫자를 입력해주세요");
+//        double inputs_double = myScan.nextDouble();
+//        System.out.println(inputs_double);
+//
+//        System.out.println("boolean형 참 거짓을 입력하시오");
+//        boolean inputs_boolean = myScan.nextBoolean();
+//        System.out.println(inputs_boolean);
+//
+////        입출력 시스템 메모리 해제
+//        myScan.close();
 
-        System.out.println("boolean형 참 거짓을 입력하시오");
-        boolean inputs_boolean = myScan.nextBoolean();
-        System.out.println(inputs_boolean);
 
-//        입출력 시스템 메모리 해제
-        myScan.close();
+
 
     }
 }
