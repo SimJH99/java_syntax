@@ -19,7 +19,7 @@ public class C02Variable {
         System.out.println("b1 = " + b1);
 
 
-//      부동소수점 오차 테스트
+//        부동소수점 오차 테스트
         double double_num = 0.1;
 //        미세오차는 조정되어 정상적으로 출력
         System.out.println(double_num);
@@ -68,7 +68,7 @@ public class C02Variable {
 //            int -> double
             double my_double1 = my_int1;
             System.out.println(my_double1);
-            // 에러 발생 : my_int1 = my_double1;
+//            에러 발생 : my_int1 = my_double1;
 //            명시적 타입은 가능 : 소수점값 손실발생 가능성이 있다.
             my_int1 = (int)my_double1;
             double my_double = 7.2f;
