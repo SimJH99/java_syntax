@@ -70,8 +70,36 @@ public class C03Operator {
         System.out.println("!result2 : " + !result2);
 
 
+//        이진법
+//        0000101       // 0000110
+        int i = 5; int j = 6;
 //        비트연산자 : &, 비트 상에서 각자리의 수가 모두 1일경우만 1
-        int i = 3; int j = 1;
-        System.out.println(i & j);      // 1 출력
+        System.out.println(i & j);      // 4 출력 => 0000100
+//        비트연산자 : \, 비트 상에서 각자리의 수가 하나라도 1이면 1
+        System.out.println(i | j);      // 7 출력 => 0000111
+//        비트연산자 : ^, 비트 상에서 각자리의 수가 일치하지 않은 경우에만 1
+        System.out.println(i ^ j);      // 3 출력 => 0000011
+//        비트연산자 : ~, 비트 상에서 각자리의 수의 반대인 값을 변환
+        System.out.println(~i);
+//        시프트연산자 : <<, >>  => 곱셈과 나눗셈의 효과가 발생
+        System.out.println(i << 1);
+
+
+        int c = 13;     //00001101
+        int d = 9;      //00001001
+
+
+        while (b!=0) {
+            int same_index = c & d;     //and연산으로 구한 carry생성
+            c = c ^ d;  //XOR연산으로 구한 비트값 a에 할당
+            d = same_index << 1;
+        }
+//        반복 1회차
+//        sameindex : 1001
+//        c : 00100
+//        d : 10010
+//        반복 2회차
+//        c : 10110
+        System.out.println(c);
     }
 }
