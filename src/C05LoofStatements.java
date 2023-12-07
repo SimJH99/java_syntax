@@ -106,13 +106,25 @@ public class C05LoofStatements {
 //        System.out.println(num);        // num은 전역변수이므로 접근 가능
 ////        System.out.println(abc);       // if문 안에서 정의된 변수abc는 지역변수이므로 접근불가
 
-//        2중 for문을 통해 배열 접근;
-        int[][] arr = {{1,2,3,4}, {5,6,7,8}};
-        for(int i = 0; i < arr.length; i++) {
-            for(int j = 0; j < arr[i].length; j++) {
-                System.out.print(arr[i][j] + " ");
+////        2중 for문을 통해 배열 접근;
+//        int[][] arr = {{1,2,3,4}, {5,6,7,8}};
+//        for(int i = 0; i < arr.length; i++) {
+//            for(int j = 0; j < arr[i].length; j++) {
+//                System.out.print(arr[i][j] + " ");
+//            }
+//            System.out.println();
+//        }
+
+//        라벨문
+        loop1:
+        for (int i =0; i < 5; i++){
+            loop2:
+            for (int j = 0; j < 5; j++){
+                System.out.println("hello world");
+                if (j == 2){
+                    break loop1;    //그냥 break; 하는 것과 비교
+                }
             }
-            System.out.println();
         }
 
 

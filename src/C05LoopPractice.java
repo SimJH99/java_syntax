@@ -43,14 +43,47 @@ public class C05LoopPractice {
 
 
 
-//        이중반복문으로 구구단 출력하기
+////        이중반복문으로 구구단 출력하기
+//
+//        for(int i = 1; i < 10; i++) {
+//            for(int j = 2; j < 10; j++) {
+//                System.out.print(j + " X " + i + " = " + i*j + " | ");
+//            }
+//            System.out.println();
+//        }
 
-        for(int i = 1; i < 10; i++) {
-            for(int j = 2; j < 10; j++) {
-                System.out.print(j + " X " + i + " = " + i*j + " | ");
+////        라벨문 활용1
+////        target이 matrix배열에 어디에 있는지 출력하는 예제
+//        int[][] matrix = {{1,2,3,4}, {5,6,7}, {8,9}, {10,11,12,13,14}};
+//
+//        int target = 11;
+//
+//        loop1:
+//        for(int i = 0; i < matrix.length; i++) {
+//            for(int j = 0; j < matrix[i].length; j++) {
+//                if(target == matrix[i][j]){
+//                    System.out.println("[" + i + "]" + "," + "[" + j + "]");
+//                    break ;
+//                }
+//            }
+//        }
+
+//        1 ~ 20 숫자가 있을 때, 이중에 약수가 5개 이상인 숫자 중에 가장 작은 값을 구하시오.
+        loop1 :
+        for(int i = 1; i <= 20; i++){
+            int answer = 0;
+            for(int j = 1; j <= 20; j++){
+                if(i % j == 0 && i > j) {
+                    answer++;
+                }
+                if(answer == 5){
+                    System.out.println(i);
+                    break loop1;
+                }
             }
-            System.out.println();
         }
+
+
 
 
 
