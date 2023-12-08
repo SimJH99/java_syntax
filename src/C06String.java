@@ -29,6 +29,7 @@ public class C06String {
 ////        String과 int의 형변환
 //        int a = 10;
 //        String st_a = Integer.toString(a);  // "10"
+//        String st_a2 = String.valueOf(a);
 //        int c = Integer.parseInt(st_a);     // 10
 //
 ////        참조자료형에 원시자료형을 담을 때는 wrapper클래스를 써야한다.     ex)컬렉션프레임워크(List, set ...)
@@ -203,6 +204,26 @@ public class C06String {
 //        }
 
 
+////        join : String[] -> String
+//        String[] str = {"hello", "world", "java", "python", "linux"};
+//        String str1 = String.join(" ", str);
+//        System.out.println(str1);
 
+
+////        StringBuffer
+//        StringBuffer sb1 = new StringBuffer("hello");
+//        System.out.println(sb1.toString());
+//        sb1.append(" world");
+//        System.out.println(sb1);
+//        sb1.insert(5, " java");
+//        System.out.println(sb1);
+//        System.out.println(sb1.substring(6, 10));
+//        sb1.delete(5,10);
+//        System.out.println(sb1);
+//
+////        성능 : string < StringBuffer < StringBuilder(스레드 safe X)
+//        StringBuilder sb2 = new StringBuilder("hello");
+//        sb2.append(" world");
+//        System.out.println(sb2);
     }
 }
