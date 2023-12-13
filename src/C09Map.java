@@ -29,7 +29,7 @@ public class C09Map {
 //        System.out.println(myMap.keySet());
 //        System.out.println(myMap.values());
 //
-////        enhanced for : key값 하나씩 출력.
+////        enhanced for문 : key값 하나씩 출력.
 //        for(String a :myMap.keySet()){
 //            System.out.println(myMap.get(a));
 //        }
@@ -86,52 +86,44 @@ public class C09Map {
 //            System.out.println("종목 : " + key + " 인원 수 : " + myMap2.get(key));
 //        }
 
-        String[] participant = {"leo", "kiki", "eden"};
-        String[] completion = {"eden", "kiki"};
-        String answer = new String();
-
-        Map <String, Integer> comMap = new HashMap<>();
-
-//        for(int i = 0; i < completion.length; i++){
-//            if(!comMap.containsKey(completion[i])){
-//                comMap.put(completion[i],1);
-//            } else {
-//                int n = comMap.get(completion[i]);
-//                comMap.put(completion[i], n+1);
-//            }
-//        }
+//        프로그래머스문제 완주하지 못한 자
+//        String[] participant = {"leo", "kiki", "eden"};
+//        String[] completion = {"eden", "kiki"};
 //
-//        for(int i = 0; i<participant.length; i++){
-//            if(!comMap.containsKey(participant[i])){
-//                answer += participant[i];
-//            } else if (comMap.containsKey(participant[i]) && comMap.containsValue(1)) {
-//                answer += participant[i];
+//        Map <String, Integer> myMap = new HashMap<>();
+//        Map<String, Integer> participant_map = new HashMap<>();
+//
+//        for(String a : participant){
+//            myMap.put(a, myMap.getOrDefault(a, 0)+1);
+//        }
+//        for(String a : completion){
+//            if(myMap.get(a) == 1){
+//                myMap.remove(a);
+//            } else {
+//                myMap.put(a, myMap.get(a)-1);
 //            }
 //        }
+//        String answer = myMap.keySet().iterator().next();
 //
 //        System.out.println(answer);
 
-        Map<String, Integer> participant_map = new HashMap<>();
+//        LinkedHashMap : 데이터 삽입순서 유지
+        Map<String, Integer> myMap1 = new LinkedHashMap<>();
+        myMap1.put("hello5", 1);
+        myMap1.put("hello4", 1);
+        myMap1.put("hello3", 1);
+        myMap1.put("hello2", 1);
+        myMap1.put("hello1", 1);
+        System.out.println(myMap1);
 
-        for(String a : participant){
-            participant_map.put(a, participant_map.getOrDefault(a,0)+1);
-        }
-
-        for(String a : completion){
-            if(participant_map.get(a) > 1){
-                participant_map.put(a, participant_map.get(a)-1);
-                continue;
-            }
-            if(participant_map.get(a) == 1){
-                participant_map.remove(a);
-            }
-        }
-
-        for(String a : participant_map.keySet()){
-            answer = a;
-        }
-
-        System.out.println(answer);
+//        TreeMap :key를 통해 데이터 정렬
+        Map<String, Integer> myMap2 = new TreeMap<>();
+        myMap2.put("hello5", 1);
+        myMap2.put("hello3", 1);
+        myMap2.put("hello2", 1);
+        myMap2.put("hello4", 1);
+        myMap2.put("hello1", 1);
+        System.out.println(myMap2);
 
 
 
