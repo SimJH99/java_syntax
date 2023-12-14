@@ -1,3 +1,5 @@
+package C00HelloWorld;
+
 import com.sun.security.auth.UnixNumericGroupPrincipal;
 import com.sun.source.doctree.SeeTree;
 

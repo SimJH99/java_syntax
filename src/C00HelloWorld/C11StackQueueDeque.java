@@ -1,7 +1,8 @@
-import java.util.*;
-import java.util.concurrent.ArrayBlockingQueue;
+package C00HelloWorld;
 
-public class C11StackQueue {
+import java.util.*;
+
+public class C11StackQueueDeque {
     public static void main(String[] args) {
 //        Stack<Integer> mySt =  new Stack<>();
 //        mySt.push(10);
@@ -129,32 +130,32 @@ public class C11StackQueue {
 //        }
 
 
-//        프로그래머스 문제 '더 맵게'
-        int[] scoville = {1,2,3,9,10,12};
-        int K = 7;
-
-
-        Queue<Integer> myQue = new PriorityQueue<>();
-        for(int a : scoville){
-            myQue.add(a);
-        }
-
-        int answer = 0;
-
-        while (true) {
-            if(myQue.peek() >= K){
-                break;
-            } else if (myQue.size() == 1 && myQue.peek() < K){
-                answer = -1;
-                break;
-            } else {
-                answer++;
-                int temp = myQue.poll() * myQue.poll() * 2;
-                myQue.add(temp);
-            }
-        }
-
-        System.out.println(answer);
+////        프로그래머스 문제 '더 맵게'
+//        int[] scoville = {1,2,3,9,10,12};
+//        int K = 7;
+//
+//
+//        Queue<Integer> myQue = new PriorityQueue<>();
+//        for(int a : scoville){
+//            myQue.add(a);
+//        }
+//
+//        int answer = 0;
+//
+//        while (true) {
+//            if(myQue.peek() >= K){
+//                break;
+//            } else if (myQue.size() == 1 && myQue.peek() < K){
+//                answer = -1;
+//                break;
+//            } else {
+//                answer++;
+//                int temp = myQue.poll() * myQue.poll() * 2;
+//                myQue.add(temp);
+//            }
+//        }
+//
+//        System.out.println(answer);
 
 //        Queue<Integer> pq = new PriorityQueue<>(scoville.length);
 //        int answer = 0;
@@ -185,11 +186,52 @@ public class C11StackQueue {
 //                }
 //            }
 //        }
-//
 //        answer = count;
 
+////        ArrayDeque : 양방향에서 데이터를 삽입 / 제거 할 수 있다.
+//        Deque<Integer> myDeque = new ArrayDeque<>();
+//        myDeque.addFirst(10);
+//        myDeque.addFirst(20);
+//        System.out.println(myDeque);    //20, 10
+//        myDeque.addLast(30);
+//        System.out.println(myDeque);    //20, 10, 30
+//
+//        System.out.println(myDeque.pollFirst());    //20
+//        System.out.println(myDeque.pollLast());     //30
+//        System.out.println(myDeque);        //10
 
+//        addFirst()
+//        addLast()
+//        peekFirst()
+//        peekLast()
+//        pollFirst()
+//        pollLast()
 
+        String s = ")()(";
+        boolean answer = true;
+
+        Queue<Character> myQueue = new LinkedList<>();
+
+        for(int i = 0; i < s.length(); i++){
+            char ch = s.charAt(i);
+            if(ch == ')' && myQueue.isEmpty()){
+                answer = false;
+                break;
+            } else {
+                if (ch == '(') {
+                    myQueue.add('(');
+                } else if (ch == ')') {
+                    myQueue.poll();
+                }
+            }
+
+            if(myQueue.isEmpty()){
+                answer = true;
+            } else {
+                answer = false;
+            }
+        }
+        System.out.println(answer);
 
 
     }

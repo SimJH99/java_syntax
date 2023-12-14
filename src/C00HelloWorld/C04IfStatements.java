@@ -1,3 +1,5 @@
+package C00HelloWorld;
+
 import java.util.Scanner;
 
 public class C04IfStatements {

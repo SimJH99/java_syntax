@@ -1,3 +1,5 @@
+package C00HelloWorld;
+
 public class C1101StackFuntion1 {
 //    public static void main(String[] args) {
 //        System.out.println("main함수 시작");

@@ -1,3 +1,5 @@
+package C00HelloWorld;
+
 import java.util.*;
 
 public class C09Map {

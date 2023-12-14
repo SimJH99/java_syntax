@@ -1,3 +1,5 @@
+package C00HelloWorld;
+
 import java.util.*;
 import java.util.stream.Collectors;
 
