@@ -1,6 +1,4 @@
-package C00HelloWorld;
-
-import java.beans.PropertyEditorSupport;
+package C01JavaBasic;
 
 public class C05LoopPractice {
     public static void main(String[] args) {

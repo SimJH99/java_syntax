@@ -5,49 +5,51 @@ import java.util.Arrays;
 import java.util.List;
 
 public class C1208RecurCombiPermu {
+    static boolean[] visited;
     public static void main(String[] args) {
         List<Integer> myList = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
         List<List<Integer>> combinations = new ArrayList<>();
         List<Integer> temp = new ArrayList<>();
-        int n = 2;
+        visited = new boolean[myList.size()];
+        int n = 3;
 
-//        for (int i = 0; i < myList.size(); i++) {
-//            temp.add(myList.get(i));
-//            for (int j = i + 1; j < myList.size(); j++){
-//                temp.add(myList.get(i));
-//                combinations.add(new ArrayList<>(temp));
-//                temp.remove(temp.size()-1);
-//            }
-//            temp.remove(temp.size()-1);
-//        }
-
-//        for(int i =0; i < myList.size(); i++){
-//            for(int j = i+1; j <myList.size(); j++){
-////                combinations.add(new ArrayList<>(Arrays.asList(myList.get(i), myList.get(j))));
-//                List<Integer> temp = new ArrayList<>();
-//                temp.add(myList.get(i));
-//                temp.add(myList.get(j));
-//                combinations.add(temp);
-//            }
-//        }
-        combination(myList,combinations, temp, n, 0);
+        permutation(myList, visited, combinations, temp, n);
         System.out.println(combinations);
     }
 
-    static void combination(List<Integer> myList1 , List<List<Integer>> combinations1, List<Integer> temp1,  int n, int start){
+    static void permutation(List<Integer> myList, boolean[] visited, List<List<Integer>> combinations, List<Integer> temp1,  int n){
         if(temp1.size() == n){
-            combinations1.add(new ArrayList<>(temp1));
+            combinations.add(new ArrayList<>(temp1));
             return;
         }
 
-        for (int i = start; i < myList1.size(); i++) {
-            temp1.add(myList1.get(i));
-            combination(myList1, combinations1, temp1, n, i+1);
-            temp1.remove(temp1.size()-1);
+        for (int i = 0; i < myList.size(); i++) {
+            if(!visited[i]){
+                visited[i] = true;
+                temp1.add(myList.get(i));
+                permutation(myList, visited , combinations, temp1, n);
+                temp1.remove(temp1.size()-1);
+                visited[i] = false;
+            }
         }
     }
-}
 
+//
+
+
+//    static void combination(List<Integer> myList1 , List<List<Integer>> combinations1, List<Integer> temp1,  int n, int start){
+//        if(temp1.size() == n){
+//            combinations1.add(new ArrayList<>(temp1));
+//            return;
+//        }
+//
+//        for (int i = start; i < myList1.size(); i++) {
+//            temp1.add(myList1.get(i));
+//            combination(myList1, combinations1, temp1, n, i+1);
+//            temp1.remove(temp1.size()-1);
+//        }
+//    }
+}
 
 //
 //  i = 0

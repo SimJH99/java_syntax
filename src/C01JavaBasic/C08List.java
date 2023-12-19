@@ -1,7 +1,4 @@
-package C00HelloWorld;
-
-import java.util.*;
-import java.util.stream.Collectors;
+package C01JavaBasic;
 
 public class C08List {
     public static void main(String[] args){

@@ -1,4 +1,4 @@
-package C00HelloWorld;
+package C01JavaBasic;
 
 public class C1101StackFuntion1 {
 //    public static void main(String[] args) {

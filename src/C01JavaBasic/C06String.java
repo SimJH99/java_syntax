@@ -1,9 +1,4 @@
-package C00HelloWorld;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.regex.Pattern;
+package C01JavaBasic;
 
 public class C06String {
     public static void main(String[] args) {

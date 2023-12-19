@@ -1,9 +1,4 @@
-package C00HelloWorld;
-
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.Optional;
-import java.util.OptionalInt;
+package C01JavaBasic;
 
 public class C07Array {
     public static void main(String[] args) {

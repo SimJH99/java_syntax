@@ -1,4 +1,4 @@
-package C00HelloWorld;
+package C01JavaBasic;
 
 import java.util.Scanner;
 

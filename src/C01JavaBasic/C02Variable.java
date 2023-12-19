@@ -1,6 +1,4 @@
-package C00HelloWorld;
-
-import java.math.BigDecimal;
+package C01JavaBasic;
 
 public class C02Variable {
     public static void main(String[] args) {
