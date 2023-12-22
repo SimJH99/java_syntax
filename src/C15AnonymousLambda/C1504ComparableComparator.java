@@ -48,6 +48,7 @@ public class C1504ComparableComparator {
 //            }
 //        });
 //
+//
 //        studentList.sort((o1, o2) -> o1.getAge() - o2.getAge());
 //        System.out.println(studentList);
 //
