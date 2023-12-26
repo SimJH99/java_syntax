@@ -4,7 +4,7 @@ import java.util.*;
 
 public class C10Set {
     public static void main(String[] args) {
-////       Set은 중목없고 순서 없다.
+////       Set은 중복없고 순서 없다.
 //        Set <String> mySet = new HashSet<>();
 //        mySet.add("h");
 //        mySet.add("h");

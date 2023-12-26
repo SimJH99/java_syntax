@@ -17,7 +17,7 @@ public class C11StackQueueDeque {
 //        System.out.println(mySt.size());
 //        System.out.println(mySt.isEmpty());
 //
-////        String 타빙 5개 정도 추가후 while문을 통해 모두 출력.
+////        String 타입 5개 정도 추가후 while문을 통해 모두 출력.
 //        Stack<String> myst2 = new Stack<>();
 //        myst2.push("hello1");
 //        myst2.push("hello2");
