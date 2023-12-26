@@ -5,7 +5,6 @@ class Author{
     private String name;
     private String email;
     private String password;
-
     static Long static_id = 0L;
 
     Author(String name, String email, String password) {
