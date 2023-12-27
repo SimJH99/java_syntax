@@ -45,9 +45,8 @@ public class AuthorController {
                     System.out.println("login하실 비밀번호를 입력해주세요");
                     String authorPassword = sc2.nextLine();
                     try {
-                        Optional<Author> loginedAuthor = Optional.empty();
-                        loginedAuthor = authorService.login(authorEmail, authorPassword);
-                        System.out.println(loginedAuthor.get().getName() + "님 환영합니다.");
+                        Author loginedAuthor = authorService.login(authorEmail, authorPassword);
+                        System.out.println(loginedAuthor.getName() + "님 환영합니다.");
                         System.out.println("-----로그인 완료.-----");
                     } catch (NoSuchElementException | IllegalArgumentException e){
                         System.out.println(e.getMessage());

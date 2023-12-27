@@ -1,5 +1,7 @@
 package C17ExceptionFileParsing.AuthorException;
 
+
+//Model
 class Author{
     private Long id;
     private String name;

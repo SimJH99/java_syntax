@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Optional;
 
+//view
 class AuthorService {
     AuthorRepository authorRepository;
     AuthorService(){
@@ -14,18 +15,18 @@ class AuthorService {
         if(author.getPassword().length()<=5){
             throw new IllegalArgumentException("비밀번호가 너무 짧습니다.");
         }
-//        기존에 같은email있는지도 체크
+//        기존에 같은 email이 있는지도 체크
         Optional<Author> author1 =  authorRepository.getAuthorByEmail(author.getEmail());
         if(author1.isPresent()){
             throw new IllegalArgumentException("이미 가입한 email입니다.");
         }
         authorRepository.register(author);
     }
-    Optional<Author> login(String email, String password) throws IllegalArgumentException, NoSuchElementException{
+    Author login(String email, String password) throws IllegalArgumentException, NoSuchElementException{
         Optional<Author> author = authorRepository.getAuthorByEmail(email);
         if(author.isPresent()){
             if(author.get().getPassword().equals(password)){
-                return author;
+                return author.get();
             }else{
                 throw new IllegalArgumentException("존재하지 않는 아이디 입니다.");
             }
